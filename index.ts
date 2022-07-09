@@ -15,7 +15,7 @@ contato1.NovoNome = 'Falcão'
 contato1.NovoNum = 81999035870
 console.log(contato1.Dados)
 
-var televisao1 = new Televisao(0,0)
+var televisao1 = new Televisao()
 var controle = new Controle(televisao1)
 
 console.log(controle.Volume) //0

@@ -4,7 +4,7 @@ export class Televisao{
     volume: number;
     canal: number;
     
-    constructor(vol: number, canal: number){
+    constructor(){
         this.volume = 0;
         this.canal = 0;
     }

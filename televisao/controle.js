@@ -3,6 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Controle = void 0;
 class Controle {
     constructor(tv) {
+        this.VOLUME_MAXIMO = 100;
+        this.CANAL_MAXIMO = 800;
         this.tv = tv;
     }
     get Volume() {
@@ -15,7 +17,7 @@ class Controle {
         this.tv.canal = canal;
     }
     AumentaVol() {
-        if (this.Volume <= 99) {
+        if (this.Volume <= this.VOLUME_MAXIMO) {
             return this.tv.volume++;
         }
         else {
@@ -31,7 +33,7 @@ class Controle {
         }
     }
     AumentaCanal() {
-        if (this.Canal >= 0 && this.Canal <= 799) { //canal >= 0 não seria necessário, pois tv já recebe canal = 0 como padrão
+        if (this.Canal >= 0 && this.Canal <= this.CANAL_MAXIMO) { //canal >= 0 não seria necessário, pois tv já recebe canal = 0 como padrão
             return this.tv.canal++;
         }
         else {
@@ -39,7 +41,7 @@ class Controle {
         }
     }
     DiminuiCanal() {
-        if (this.Canal > 0 && this.Canal <= 800) {
+        if (this.Canal > 0 && this.Canal <= this.CANAL_MAXIMO) {
             return this.tv.canal--;
         }
         else {

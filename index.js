@@ -11,7 +11,7 @@ let contato1 = new contato_1.Contato('Camilla', 'millafalcao.acad@gmail.com', 84
 contato1.NovoNome = 'Falcão';
 contato1.NovoNum = 81999035870;
 console.log(contato1.Dados);
-var televisao1 = new televisao_1.Televisao(0, 0);
+var televisao1 = new televisao_1.Televisao();
 var controle = new controle_1.Controle(televisao1);
 console.log(controle.Volume); //0
 controle.AumentaVol();

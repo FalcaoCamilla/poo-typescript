@@ -4,6 +4,8 @@ import { Televisao } from "./televisao";
 
 export class Controle{
     tv:Televisao
+    readonly VOLUME_MAXIMO = 100;
+    readonly CANAL_MAXIMO = 800;
 
     constructor(tv:Televisao) {
         this.tv = tv
@@ -22,7 +24,7 @@ export class Controle{
     }
 
     AumentaVol(){
-        if(this.Volume <= 99){
+        if(this.Volume <= this.VOLUME_MAXIMO){
             return this.tv.volume ++
         }
         else{
@@ -40,7 +42,7 @@ export class Controle{
     }
 
     AumentaCanal(){
-        if(this.Canal >= 0 && this.Canal <= 799){ //canal >= 0 não seria necessário, pois tv já recebe canal = 0 como padrão
+        if(this.Canal >= 0 && this.Canal <= this.CANAL_MAXIMO){ //canal >= 0 não seria necessário, pois tv já recebe canal = 0 como padrão
             return this.tv.canal ++
         }else{
             return this.tv.canal = 0
@@ -48,7 +50,7 @@ export class Controle{
     }
 
     DiminuiCanal(){
-        if(this.Canal > 0 && this.Canal <= 800){
+        if(this.Canal > 0 && this.Canal <= this.CANAL_MAXIMO){
             return this.tv.canal --
         }else{
             return this.tv.canal = 0

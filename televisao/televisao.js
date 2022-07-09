@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Televisao = void 0;
 class Televisao {
-    constructor(vol, canal) {
+    constructor() {
         this.volume = 0;
         this.canal = 0;
     }
