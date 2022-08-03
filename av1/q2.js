@@ -11,12 +11,7 @@ class Conta {
         return this.saldo;
     }
     temSaldo() {
-        if (this.saldo >= 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return this.saldo >= 0;
     }
     depositar(n) {
         if (this.temSaldo()) {

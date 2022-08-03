@@ -18,11 +18,7 @@ export class Conta {
     }
 
     temSaldo(){
-        if(this.saldo >= 0){
-            return true
-        } else {
-            return false
-        }
+        return this.saldo >= 0
     }
 
     depositar(n: number){
